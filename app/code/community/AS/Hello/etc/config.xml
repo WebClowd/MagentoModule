@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config> 
+	<global>
+		<modules>
+                <AS_Hello>
+                        <version>0.1.0</version>
+                </AS_Hello>
+        </modules>
+		
+		 <blocks>
+            <hello>
+                <rewrite>						
+						<hello>AS_Hello_Block_Hello</hello>
+				</rewrite>
+            </hello>
+		</blocks> 
+		
+	</global>	
+		 <frontend>
+                <routers>
+                        <hello> 
+                                <use>standard</use>
+                                <args>
+                                        <module>AS_Hello</module>
+                                        <frontName>Test-hello</frontName>
+                                </args>
+                        </hello>
+                </routers>
+				<layout>
+					<updates>
+						<hello>
+							<file>hello.xml</file>
+						</hello>
+					</updates>
+				</layout>
+        </frontend>
+		
+</config>
